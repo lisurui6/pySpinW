@@ -24,5 +24,4 @@ print(spec)
 
 m.figure()
 m.sw_plotspec(spec, nargout=0)
-m.waitforgui(nargout=0)
 print('YaY NO cRAsh ;-)')
