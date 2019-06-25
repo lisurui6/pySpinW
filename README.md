@@ -1,6 +1,10 @@
 # pySpinW
 
 ## WARNING - Work in progress.
+A live demo can be found through Pangeos instance of [Binder](https://binder.pangeo.io/): 
+
+[![Binder](https://binder.pangeo.io/badge_logo.svg)](https://binder.pangeo.io/v2/gh/spinw/pySpinW/master)
+
 
 ### Summary
 
