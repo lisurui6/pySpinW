@@ -10,10 +10,11 @@
 
 This is currently under development and will progress in stages. 
 1) ~~Conversion to a compiled python library.~~ *Currently in testing*
-2) Conversion of graphics modules to native python using matplotlib/VTK.
-3) Migration of auxiliary code to pure python.
-4) Migration of main classes to pure python.
-5) Convert the core spinwave code to C++
+2) Conversion of symmetry, atoms, matoms etc to python. *In progress*
+3) Conversion of graphics modules to native python using matplotlib/VTK.
+4) Migration of auxiliary code to pure python.
+5) Migration of main classes to pure python.
+6) Convert the core spinwave code to C++
 
 ### Limitations
 
