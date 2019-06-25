@@ -51,7 +51,7 @@ WORKDIR /home/developer
 
 RUN git clone https://github.com/SpinW/pySpinW.git \
     && cd pySpinW \
-    && python setup.py install
+    && pip install -e .
 
 # Configure environment variables for MCR
 ENV LD_LIBRARY_PATH /opt/mcr/v96/runtime/glnxa64:/opt/mcr/v96/bin/glnxa64:/opt/mcr/v96/sys/os/glnxa64

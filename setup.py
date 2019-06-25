@@ -20,7 +20,7 @@ setup(
     package_dir={
         'pySpinW': 'pySpinW',
         'pySpinW.swFuncs': pathMySubPackage1},
-    package_data={'pySpinW.swFuncs': pathMySubPackage1data},
+    package_data={'pySpinW.swFuncs': [pathMySubPackage1data]},
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
