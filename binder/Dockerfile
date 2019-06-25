@@ -6,7 +6,7 @@
 #
 # See http://www.mathworks.com/products/compiler/mcr/ for more info.
 
-FROM pangeo/pangeo-notebook-onbuild:2019.05.23
+FROM pangeo/pangeo-notebook-onbuild:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
