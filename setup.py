@@ -17,7 +17,7 @@ setup(
      long_description_content_type="text/markdown",
      url="https://github.com/SpinW/pySpinW",
      packages=find_packages(),
-     package_data={'swFuncs': [pathMySubPackage1data]},
+     package_data={'pySpinW.swFuncs': [pathMySubPackage1data]},
      classifiers=[
          "Programming Language :: Python :: 3",
          "License :: OSI Approved :: MIT License",
