@@ -12,3 +12,7 @@ pySpinW/\.DS_Store
 \.cache/
 \__pycache__/
 
+
+dist/
+
+pySpinW\.egg-info/

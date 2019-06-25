@@ -36,7 +36,22 @@ RUN mkdir /mcr-install \
 # Move libexpat becuase it is too old
 RUN mv /opt/mcr/v96/bin/glnxa64/libexpat.so.1 /opt/mcr/v96/bin/glnxa64/libexpat.so.1.NOFIND
 
+RUN git clone https://github.com/SpinW/pySpinW.git \
+    && cd pySpinW \
+    && python setup.py install
+
+# Setup the graphics
+# Replace 1000 with your user / group id
+RUN export uid=1000 gid=1000 \
+    && mkdir -p /home/developer \
+    && echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd \
+    && echo "developer:x:${uid}:" >> /etc/group \
+    && chown ${uid}:${gid} -R /home/developer
+
+# Running as root is bad juju
+USER developer
+ENV HOME /home/developer
+WORKDIR /home/developer
+
 # Configure environment variables for MCR
 ENV LD_LIBRARY_PATH /opt/mcr/v96/runtime/glnxa64:/opt/mcr/v96/bin/glnxa64:/opt/mcr/v96/sys/os/glnxa64
-
-RUN git clone https://github.com/SpinW/pySpinW.git
