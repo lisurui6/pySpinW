@@ -6,7 +6,7 @@
 #
 # See http://www.mathworks.com/products/compiler/mcr/ for more info.
 
-FROM pangeo/pangeo-notebook:latest
+FROM pangeo/pangeo-notebook-onbuild:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -38,3 +38,5 @@ RUN mv /opt/mcr/v96/bin/glnxa64/libexpat.so.1 /opt/mcr/v96/bin/glnxa64/libexpat.
 
 # Configure environment variables for MCR
 ENV LD_LIBRARY_PATH /opt/mcr/v96/runtime/glnxa64:/opt/mcr/v96/bin/glnxa64:/opt/mcr/v96/sys/os/glnxa64
+
+RUN git clone https://github.com/SpinW/pySpinW.git
