@@ -25,3 +25,15 @@ services:
       - DISPLAY=${DISPLAY}
     command:
       bash -c "python3 docker_script.py"
+
+  binder:
+    container_name: binderSpinW
+    build:
+      context: .
+      dockerfile: binder/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/opt/notebooks
+    command: >
+      bash -c "jupyter notebook --notebook-dir=/opt/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''"
