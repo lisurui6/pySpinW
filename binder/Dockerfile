@@ -49,7 +49,7 @@ USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
 
-RUN mkidr src \
+RUN mkdir src \
     && git clone https://github.com/SpinW/pySpinWexamples.git \
     && cd src \
     && git clone https://github.com/SpinW/pySpinW.git \
