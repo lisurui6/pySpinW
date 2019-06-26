@@ -49,11 +49,14 @@ USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
 
-RUN git clone https://github.com/SpinW/pySpinW.git \
+RUN mkidr src \
+    && git clone https://github.com/SpinW/pySpinWexamples.git \
+    && cd src \
+    && git clone https://github.com/SpinW/pySpinW.git \
     && cd pySpinW \
     && pip install -e ./
 
 # Configure environment variables for MCR
 ENV LD_LIBRARY_PATH /opt/mcr/v96/runtime/glnxa64:/opt/mcr/v96/bin/glnxa64:/opt/mcr/v96/sys/os/glnxa64
 
-WORKDIR /home/developer/pySpinW/examples
+WORKDIR /home/developer/pySpinWexamples
