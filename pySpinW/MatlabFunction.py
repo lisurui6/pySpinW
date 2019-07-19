@@ -1,4 +1,4 @@
-class MatlabFunction(object):
+class MatlabFunction:
 
     def __init__(self, interface, fun, converter=None, parent=None, caller=None):
         '''
