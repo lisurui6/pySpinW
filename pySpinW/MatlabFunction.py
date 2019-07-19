@@ -1,14 +1,14 @@
 class MatlabFunction:
 
     def __init__(self, interface, fun, converter=None, parent=None, caller=None):
-        '''
+        """
 
         Create a proxt function to handle matlab calls
 
         :param interface: The callable MATLAB interface (where we run functions)
         :param parent: What the function has been called from. Needed for handle class updates.
         :param fun: String name of function to be executed.
-        '''
+        """
         self._interface = interface
         self.converter = converter
         if parent is None:

@@ -72,7 +72,7 @@ class MatlabProxyObject:
                 @property
                 def __doc__(_self):
                     classname = getattr(interface, 'class')(self)
-                    #TODO this is probably broken :-/
+                    # TODO this is probably broken :-/
                     return interface.help('{0}.{1}'.format(classname, name), nargout=1)
 
             return matlab_method()
